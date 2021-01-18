@@ -1,5 +1,5 @@
 import React from 'react';
-import Forms from './Components/Forms';
+import Forms from './Components/Form';
 import './sass/style.scss';
 
 function App() {

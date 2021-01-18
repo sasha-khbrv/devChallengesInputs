@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TextInputs() {
+function TextInput() {
   return (
     <div>
       Text inputs
@@ -8,4 +8,4 @@ function TextInputs() {
   );
 }
 
-export default TextInputs;
+export default TextInput;
