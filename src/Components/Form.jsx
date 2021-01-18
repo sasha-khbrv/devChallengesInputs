@@ -140,7 +140,7 @@ const Form = () => {
           </div>
           <div className='row'>
             <div className='cell cell-full-width' >
-              <p className='cell-title'>&lt;Textarea rows="4" /&gt;</p>
+              <p className='cell-title'>&lt;Textarea required rows="4" /&gt;</p>
               <TextArea
                 label="Textarea"
                 id="firstTxtArea"
