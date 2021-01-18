@@ -1,0 +1,148 @@
+//Typography
+.inputLabelTypo {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.75rem;
+  line-height: 1.42em;
+  color: $gray-dark;
+}
+
+.inptTypo {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.1em;
+  color: $gray-dark;
+
+}
+
+.helperTextTypo {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.624rem;
+  line-height: 1.4em;
+  color: $gray-default;
+}
+
+//Elements
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.inputLabel {
+  @extend .inputLabelTypo;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  input {
+    margin-top: 4px;
+  }
+  &:focus-within {
+    color: $primary;
+  }
+}
+
+.inpt {
+  @extend .inptTypo;
+  width: 200px;
+  outline: none;
+  border: 1px solid $gray-default;
+  border-radius: 8px;
+  background-color: transparent;
+
+  &::placeholder {
+    color: $gray-default;
+  }
+  &:focus {
+    border-color: $primary;
+  }
+  &:hover:not(:focus) {
+    border-color: $gray-dark;
+  }
+  &:disabled {
+    pointer-events: none;
+    background-color: $gray-light;
+    border-color: $default;
+    color: $gray-default;
+  } 
+}
+
+//Errors
+.inptError {
+  border-color: $danger;
+
+  &:focus {
+    border-color: $danger;
+  }
+  &:hover:not(:focus) {
+    border-color: $gray-dark;
+  }
+}
+
+//Errors message
+.errorMsg {
+  @extend .helperTextTypo;
+  color: $white;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  bottom: -30px;
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: $danger;
+  border-radius: 6px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 4px;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;    
+    border-bottom: 5px solid $danger;
+  }
+}
+
+//HelperText
+.helperText {
+  @extend .helperTextTypo;
+  margin-top: 4px;
+}
+
+//Sizes
+.inpt--size--sm {
+  padding: 10px 12px;
+}
+.inpt--size--md {
+  padding: 18px 12px;
+}
+
+//Icons
+.inpt--endIcon--fingerPrint {
+  padding-right: 45px;
+  background: url(../../imgs/fingerprint-black-18dp.svg) no-repeat right 12px center;
+}
+.inpt--startIcon--personAdd {
+  padding-left: 45px;
+  background: url(../../imgs/person_add-black-18dp.svg) no-repeat left 12px center;
+}
+
+//Width
+.fullWidth {
+  width: 100%;
+}
+
+//Textarea
+.txtArea {
+  padding: 18px 12px;
+  resize: none;
+  word-break: break-all;
+}

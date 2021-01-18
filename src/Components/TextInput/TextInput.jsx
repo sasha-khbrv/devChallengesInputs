@@ -1,16 +1,25 @@
 import React from 'react';
-import { useField} from "formik";
+import { useField } from "formik";
+
+const SIZE = [
+  'inpt--size--sm', 'inpt--size--md'
+]
 
 const TextInput = ({ label, ...props }) => {
-  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
-  // which we can spread on <input> and alse replace ErrorMessage entirely.
+
+  const setInptSize = SIZE.includes(props.size) ? props.size : 'inpt--size--md';
+
   const [field, meta] = useField(props);
   return (
-    <div className='cell'>
-      <label htmlFor={props.id || props.name}>{label}</label>
-      <input className="text-input" {...field} {...props} />
+    <div className="inputContainer">
+      <label className='inputLabel' htmlFor={props.id}>
+        {label}
+        <input className={`inpt ${meta.touched && meta.error ? "inptError": ''} ${setInptSize} ${props.startIcon || ''} ${props.endIcon || ''} ${props.width || ''}`}
+        {...field}
+        {...props} />
+      </label>
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <span className="errorMsg">{meta.error}</span>
       ) : null}
     </div>
   );

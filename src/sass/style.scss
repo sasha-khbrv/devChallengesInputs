@@ -1,3 +1,9 @@
 @import 'basics/colors.scss';
 @import 'basics/layout.scss';
 @import 'basics/typography.scss';
+
+@import 'form/input.scss';
+
+* {
+  box-sizing: border-box;
+}
