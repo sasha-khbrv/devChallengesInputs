@@ -1,5 +1,5 @@
 # devChallenges Inputs
 
-Used React, Formik, yup, scss and css-classes.
+Used React, Formik, Yup and Sass.
 
 Made for https://devchallenges.io/.
