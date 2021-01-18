@@ -1,0 +1,18 @@
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.row {
+  margin-bottom: 45px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cell {
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

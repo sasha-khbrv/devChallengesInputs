@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Ubuntu+Mono:wght@400;700&display=swap');
+
+h1 {
+  font-family: 'Ubuntu Mono', monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  color: $text-secondary;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.cell-title {
+  font-family: 'Ubuntu Mono', monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.75rem;
+  line-height: 1em;
+  color: $text-default;
+}
+
+.btn {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.4em;
+  text-align: center;
+}
